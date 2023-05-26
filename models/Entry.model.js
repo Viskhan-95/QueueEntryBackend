@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 
 const EntrySchema = mongoose.Schema(
    {
-      numberEntryInRegistry: String,
-      numberEntryInOffice: String,
+      numberEntryInRegistry: Number,
+      numberEntryInOffice: Number,
+      letterEntryInRegistry: String,
+      letterEntryInOffice: String,
       windowNumber: String,
    },
    {
