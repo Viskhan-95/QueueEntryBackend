@@ -7,6 +7,7 @@ const EntrySchema = mongoose.Schema(
       letterEntryInRegistry: String,
       letterEntryInOffice: String,
       windowNumber: String,
+      isСomplete: Boolean,
    },
    {
       timestamps: true,
