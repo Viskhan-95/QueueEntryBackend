@@ -10,5 +10,14 @@ module.exports.entryController = {
         } catch (err) {
             res.json(err + '. Не получилось получить номер записи в регистратуру')
         }
-    }
+    },
+    postEntriesInRegistry: async (req, res) => {
+        try {
+            const {  }
+            const data = await Entry.create({});
+            const todayEntries = data.filter(dateEntry => dayjs(dateEntry.createdAt).locale(ruLocale).format('DD MM YYY') === dayjs(new Date()).locale(ruLocale).format('DD MM YYY'));
+        } catch (err) {
+            res.json(err + '. Не получилось получить номер записи в регистратуру')
+        }
+    },
 }
