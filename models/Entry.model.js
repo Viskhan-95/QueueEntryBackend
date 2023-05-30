@@ -1,19 +1,21 @@
-const mongoose = require('mongoose');
+const { Schema, SchemaTypes, model }  = require("mongoose");
 
-const EntrySchema = mongoose.Schema(
+const EntrySchema = Schema(
    {
+      windowNumber: {
+         ref: 'Window',
+         type: SchemaTypes.ObjectId,
+      },
       numberEntryInRegistry: Number,
       numberEntryInOffice: Number,
-      letterEntryInRegistry: String,
-      letterEntryInOffice: String,
-      windowNu90mber: String,
-      isActive: Boolean,
+      countEntryInRegistry: String,
+      countEntryInOffice: String,
    },
    {
       timestamps: true,
    },
 );
 
-const Entry = mongoose.model('Entry', EntrySchema);
+const Entry = model('Entry', EntrySchema);
 
 module.exports = Entry;
