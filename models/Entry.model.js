@@ -8,8 +8,8 @@ const EntrySchema = Schema(
       },
       numberEntryInRegistry: Number,
       numberEntryInOffice: Number,
-      countEntryInRegistry: String,
-      countEntryInOffice: String,
+      letterEntryInRegistry: String,
+      letterEntryInOffice: String,
    },
    {
       timestamps: true,
