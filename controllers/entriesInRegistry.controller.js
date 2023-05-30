@@ -5,7 +5,7 @@ const ruLocale = require('dayjs/locale/ru');
 module.exports.entryInRegistryController = {
    getEntries: async (req, res) => {
       try {
-         const data = await Entry.find({'createdAt': {$lte: new Date()}, isСompleted: true});
+         const data = await Entry.find({'createdAt': {$lte: dayjs(new Date()).locale(ruLocale)}, isСompleted: true});
          res.json(data);
       } catch (err) {
          res.json(err + '. Не получилось получить номер записи в регистратуру');
@@ -19,7 +19,7 @@ module.exports.entryInRegistryController = {
          const data = await Entry.create({ number, isСompleted });
          res.json(data);
       } catch (err) {
-         res.json(err + '. Не получилось записать в очередь');
+         res.json(err + '. Не получилось записать в очередь в регистратуру');
       }
    },
 };
