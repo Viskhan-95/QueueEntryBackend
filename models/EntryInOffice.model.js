@@ -10,14 +10,19 @@ const EntryInOfficeSchema = Schema(
          type: Number,
          required: true,
       },
-      isСompleted: {
+      isСomplete: {
          type: Boolean,
          required: true,
-      }
-   },
-   {
-      timestamps: true,
-   },
+      },
+      date: {
+         type: Date,
+         required: true,
+      },
+      time: {
+         type: Date,
+         required: true,
+      },
+   }
 );
 
 const EntryInOffice = model('EntryInOffice', EntryInOfficeSchema);

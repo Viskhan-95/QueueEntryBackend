@@ -2,22 +2,24 @@ const { Schema, SchemaTypes, model }  = require("mongoose");
 
 const EntryInRegistrySchema = Schema(
    {
-      windowNumber: {
-         ref: 'Window',
-         type: SchemaTypes.ObjectId,
-      },
+      windowNumber: Number,
       number: {
          type: Number,
          required: true,
       },
-      isСompleted: {
+      isСomplete: {
          type: Boolean,
          required: true,
-      }
-   },
-   {
-      timestamps: true,
-   },
+      },
+      date: {
+         type: String,
+         required: true,
+      },
+      time: {
+         type: String,
+         required: true,
+      },
+   }
 );
 
 const EntryInRegistry = model('EntryInRegistry', EntryInRegistrySchema);
