@@ -3,7 +3,7 @@ const { entryInRegistryController } = require('../controllers/entriesInRegistry.
 
 const route = Router();
 
-route.get('/entries', entryInRegistryController.getEntries);
+route.get('/entries', entryInRegistryController.getActiveEntries);
 route.post('/entry', entryInRegistryController.postEntry);
 route.patch('/complete/entry/:id', entryInRegistryController.completionEntry);
 
